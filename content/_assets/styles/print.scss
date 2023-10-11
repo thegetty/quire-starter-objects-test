@@ -110,7 +110,11 @@ $print-trim: $print-bleed * 2;
       content: counter(page, lower-roman);
     }
   }
-
+  
+  @page objects {
+    background-color: $print-splash-color;
+  }
+  
   @page splash {
     background-color: $print-splash-color;
   }
@@ -277,6 +281,10 @@ $print-trim: $print-bleed * 2;
     page: no-footer;
   }
 
+  .objects-page {
+    page: objects;
+  }
+  
   .quire-splash {
     page: splash;
     .quire-page__header {
